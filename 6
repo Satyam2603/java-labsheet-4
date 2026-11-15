@@ -1,0 +1,26 @@
+class Car {
+    String brand;
+    double mileage;
+
+    static int wheels = 4;
+
+    void setDetails() {
+        String b = "Toyota";
+        double m = 18.5;
+
+        brand = b;
+        mileage = m;
+    }
+
+    void display() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Mileage: " + mileage);
+        System.out.println("Wheels: " + wheels);
+    }
+
+    public static void main(String[] args) {
+        Car c = new Car();
+        c.setDetails();
+        c.display();
+    }
+}
