@@ -1,0 +1,27 @@
+class Factorial {
+    static int totalCalls = 0;
+
+    void calculateFactorial(int num) {
+        int factorial = 1;
+
+        totalCalls++;
+
+        if (num < 0) {
+            System.out.println("Factorial is not defined for negative numbers.");
+            return;
+        }
+
+        for (int i = 1; i <= num; i++) {
+            factorial = factorial * i;
+        }
+
+        System.out.println("Factorial of " + num + " = " + factorial);
+        System.out.println("Total Calls: " + totalCalls);
+    }
+
+    public static void main(String[] args) {
+        Factorial f = new Factorial();
+        f.calculateFactorial(5);
+        f.calculateFactorial(4);
+    }
+}
