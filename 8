@@ -1,0 +1,26 @@
+class Pen {
+    String color;
+    String type;
+
+    static String manufacturer = "Cello";
+
+    void setDetails() {
+        String c = "Blue";
+        String t = "Ball Pen";
+
+        color = c;
+        type = t;
+    }
+
+    void display() {
+        System.out.println("Color: " + color);
+        System.out.println("Type: " + type);
+        System.out.println("Manufacturer: " + manufacturer);
+    }
+
+    public static void main(String[] args) {
+        Pen p = new Pen();
+        p.setDetails();
+        p.display();
+    }
+}
