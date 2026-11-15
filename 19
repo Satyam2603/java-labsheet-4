@@ -1,0 +1,32 @@
+class Product {
+    int id;
+    String name;
+    double price;
+
+    static double discountRate = 10;
+
+    void calculatePrice() {
+        int i = 101;
+        String n = "Laptop";
+        double p = 50000;
+
+        id = i;
+        name = n;
+        price = p;
+
+        double discount = (price * discountRate) / 100;
+        double finalPrice = price - discount;
+
+        System.out.println("Product ID: " + id);
+        System.out.println("Product Name: " + name);
+        System.out.println("Original Price: " + price);
+        System.out.println("Discount: " + discountRate + "%");
+        System.out.println("Discount Amount: " + discount);
+        System.out.println("Final Price: " + finalPrice);
+    }
+
+    public static void main(String[] args) {
+        Product p = new Product();
+        p.calculatePrice();
+    }
+}
