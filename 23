@@ -1,0 +1,33 @@
+class PrimeChecker {
+    static int totalPrimeChecks = 0;
+
+    void checkPrime(int num) {
+        boolean isPrime = true;
+
+        totalPrimeChecks++;
+
+        if (num <= 1) {
+            isPrime = false;
+        } else {
+            for (int i = 2; i <= num / 2; i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        if (isPrime)
+            System.out.println(num + " is a Prime number.");
+        else
+            System.out.println(num + " is not a Prime number.");
+
+        System.out.println("Total Checks: " + totalPrimeChecks);
+    }
+
+    public static void main(String[] args) {
+        PrimeChecker p = new PrimeChecker();
+        p.checkPrime(7);
+        p.checkPrime(10);
+    }
+}
