@@ -1,0 +1,29 @@
+class BankAccount {
+    int accountNumber;
+    double balance;
+
+    static String bankName = "SBI";
+
+    void deposit() {
+        double amount = 5000;
+        balance = balance + amount;
+
+        System.out.println("Deposited Amount: " + amount);
+    }
+
+    void display() {
+        System.out.println("Account Number: " + accountNumber);
+        System.out.println("Balance: " + balance);
+        System.out.println("Bank: " + bankName);
+    }
+
+    public static void main(String[] args) {
+        BankAccount b = new BankAccount();
+
+        b.accountNumber = 12345;
+        b.balance = 10000;
+
+        b.deposit();
+        b.display();
+    }
+}
