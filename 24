@@ -1,0 +1,28 @@
+class Fibonacci {
+    static int seriesCount = 0;
+
+    void displaySeries(int n) {
+        int first = 0;
+        int second = 1;
+        int next;
+
+        seriesCount++;
+
+        System.out.println("Fibonacci Series:");
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print(first + " ");
+
+            next = first + second;
+            first = second;
+            second = next;
+        }
+
+        System.out.println("\nTotal Series: " + seriesCount);
+    }
+
+    public static void main(String[] args) {
+        Fibonacci f = new Fibonacci();
+        f.displaySeries(7);
+    }
+}
