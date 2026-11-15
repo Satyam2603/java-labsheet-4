@@ -1,0 +1,30 @@
+class Movie {
+    String name;
+    String genre;
+    double rating;
+
+    static String industry = "Bollywood";
+
+    void setDetails() {
+        String n = "3 Idiots";
+        String g = "Comedy Drama";
+        double r = 8.4;
+
+        name = n;
+        genre = g;
+        rating = r;
+    }
+
+    void display() {
+        System.out.println("Movie: " + name);
+        System.out.println("Genre: " + genre);
+        System.out.println("Rating: " + rating);
+        System.out.println("Industry: " + industry);
+    }
+
+    public static void main(String[] args) {
+        Movie m = new Movie();
+        m.setDetails();
+        m.display();
+    }
+}
