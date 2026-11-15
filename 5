@@ -1,0 +1,30 @@
+class Book {
+    String title;
+    String author;
+    double price;
+
+    static String publisher = "Oxford";
+
+    void setDetails() {
+        String t = "Java Programming";
+        String a = "James Gosling";
+        double p = 450;
+
+        title = t;
+        author = a;
+        price = p;
+    }
+
+    void display() {
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Price: " + price);
+        System.out.println("Publisher: " + publisher);
+    }
+
+    public static void main(String[] args) {
+        Book b = new Book();
+        b.setDetails();
+        b.display();
+    }
+}
